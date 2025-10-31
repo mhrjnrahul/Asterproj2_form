@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form{
+            border: 2px solid black;
+            padding: 30px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label{
+            margin-bottom: 10px;
+        }
+
+        .form-input{
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .checkbox-group, .radio-group{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        button{
+            width: 20%; 
+            padding: 10px; color: white; 
+            background-color: blue; 
+            color: white; 
+            margin-left: 34%;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover{
+            background-color: darkblue;
+            cursor: pointer;
+        }
+
+        input:focus {
+            border-color: #8582cf;
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <label for="email">Email address</label>
+        <input type="email" name="email" class="form-input">
+        
+        <label for="name">Name</label>
+        <div style="display: flex; gap: 5px;">
+            <input type="text" name="firstname" placeholder="First Name" style="width: 100%;" class="form-input">
+            <input type="text" name="lastname" placeholder="Last Name" style="width: 100%;" class="form-input">
+        </div>
+
+        <label for="address">Address</label>
+        <input type="text" name="street" placeholder="Steet Address" class="form-input">
+        <input type="text" name="office" placeholder="Office, Suite" class="form-input">
+
+        <div style="display: flex; gap: 5px;">
+            <div style="display: flex; flex-direction: column;">
+                <label for="city">City</label>
+                <input type="text" name="city" class="form-input">
+            </div>
+
+            <div style="display: flex; flex-direction: column;">
+                <label for="state">State</label>
+                <select style="padding: 10px; text-align: center; appearance: none;">
+                    <option value="CA">California</option>
+                    <option value="TX">Texas</option>
+                    <option value="NY">New York</option>
+                    <option value="FL">Florida</option>
+                    <option value="IL">Illinois</option>
+                </select>
+            </div>
+
+            <div style="display: flex; flex-direction: column;">
+                <label for="zip">Zip</label>
+                <input type="text" name="zip" style="padding: 10px;">
+            </div>
+        </div>
+
+        <label for="payment">Payment Details</label>
+        <input type="text" name="payment" style="padding: 10px;"> <br>
+        <h6 style="margin-top: -10px; margin-bottom: 20px;">ENCRYPTED AND SECURED</h6>
+
+        <label for="technologies">What radio technologies are you using?</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" value="2g"> 2G</label>
+            <label><input type="checkbox" value="3g"> 3G</label>
+            <label><input type="checkbox" value="lte"> 4G LTE</label>
+            <label><input type="checkbox" value="cat-m"> CAT-M</label>
+        </div>
+
+        <label for="data_consume">How much data do you expect to use each month?</label>
+        <div class="radio-group">
+            <label><input type="radio" name="data"> 0–50 MB</label>
+            <label><input type="radio" name="data"> 50–250 MB</label>
+            <label><input type="radio" name="data"> 250 MB–1 GB</label>
+            <label><input type="radio" name="data" disabled> 1 GB+</label>
+        </div>
+
+        <label for="promocode" style="margin-top: 10px;">Promo code</label>
+        <input type="text" class="form-input"> 
+
+        <div>
+            <input type="checkbox" checked disabled style="margin: -2px;"> Sign me up for annoying offers</input>
+            <button type="submit">Place order</button>
+        </div>
+    </form>
+</body>
+</html>
